@@ -1,9 +1,9 @@
 function playSound(event) {
     var audio = document.querySelector(`audio[data-key="${event.keyCode}"]`),
         key = document.querySelector(`div[data-key="${event.keyCode}"]`);
-    key.classList.add('playing');
+    key.classList.add('playing'); //add class with animation
     audio.play();
-    audio.currentTime = 0;
+    audio.currentTime = 0;//rewind to the start
 }
 
 window.addEventListener('keydown', playSound);
